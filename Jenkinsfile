@@ -9,6 +9,6 @@ stage('Build') {
 stage('Test') {
   node {
     unstash 'node_modules'
-    sh "npm run test"
+    sh "ls -lrt"
   }
 }
