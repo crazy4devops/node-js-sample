@@ -9,7 +9,10 @@ stage('Build') {
 
 stage('Test') {
   node {
-    unstash 'node_modules'
-    sh "ls -lrt"
+    sh "mkdir -p test"
+    dir("./test") {
+      unstash "node_modules"
+    }
+    sh "ls -lrt ./test/*"
   }
 }
