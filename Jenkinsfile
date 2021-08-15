@@ -3,6 +3,7 @@ stage('Build') {
     checkout scm
     sh "npm install"
     stash includes: 'node_modules/', name: 'node_modules'
+    sh "ls -lrt "
   }
 }
 
